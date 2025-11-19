@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HFEP Project Monitoring</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+<style>
+    .print-only {
+      display: none;
+    }
+
+    @media print {
+      body {
+        background-color: white !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      
+      .print-only {
+        display: block !important;
+      }
+
+      /* Hide non-printable elements */
+      header, .no-print, .masterlist-view {
+        display: none !important;
+      }
+      
+      /* Reset main content area for printing */
+      main {
+        padding: 1cm !important;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      /* Handle dashboard layout */
+      .dashboard-grid {
+        display: block !important; /* Stack grid items */
+      }
+      
+      .dashboard-card {
+        box-shadow: none !important;
+        border: 1px solid #e2e8f0 !important;
+        background-color: white !important;
+        page-break-inside: avoid;
+        margin-bottom: 1rem;
+      }
+      
+      /* Make charts printable */
+       .recharts-responsive-container {
+          width: 100% !important;
+          height: auto !important;
+          aspect-ratio: 1.6 / 1;
+      }
+      
+      /* Ensure tables are readable */
+       table {
+        width: 100% !important;
+        border-collapse: collapse !important;
+        font-size: 8pt !important;
+      }
+      th, td {
+        border: 1px solid #cbd5e1 !important;
+        padding: 4px !important;
+      }
+      thead {
+        display: table-header-group; /* Repeat table headers on each page */
+      }
+      
+      h2 {
+        font-size: 14pt !important;
+      }
+    }
+</style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "vite": "https://aistudiocdn.com/vite@^7.2.2",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "recharts": "https://aistudiocdn.com/recharts@^3.4.1",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-50">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

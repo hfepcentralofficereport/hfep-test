@@ -1,0 +1,5 @@
+{
+  "name": "HFEP Project Monitoring Dashboard 2",
+  "description": "An application for encoding and monitoring Health Facilities Enhancement Program (HFEP) projects, providing a clear overview of project statuses, budgets, and timelines through an intuitive dashboard and data visualization.",
+  "requestFramePermissions": []
+}
